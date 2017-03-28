@@ -49,6 +49,10 @@ export default class AutoExpandingTextInput extends PureComponent {
     this.setState({
       height: curHeight
     });
+    
+    if (this.props.onChange) {
+      this.props.onChange();
+    }
   }
 
   render() {
